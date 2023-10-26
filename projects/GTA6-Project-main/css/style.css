@@ -1,0 +1,165 @@
+/* Layout________________________________________*/
+body{
+    background: linear-gradient(-90deg, #000 10%, #000D 20%, #0000 70%),
+                url(../img/therock1.png) no-repeat,
+                url(../img/vc6.png) no-repeat;
+}
+
+#oRocha{
+    position: absolute;
+    top: 86px;
+    left: 260px;
+}
+
+.titulo{
+    font-weight: bold;
+    color: #fff;
+}
+
+.texto{
+    font-weight: lighter;
+    font-size: 20px;
+    color: white;
+}
+
+.capa{
+    text-align: right;
+    right: 20px;
+}
+
+/*Barra de mavegação_____________________________*/
+header{
+    background-color: black;
+}
+.fa-bars{
+    color: white;
+}
+
+.fa-instagram{
+    color: white;
+}
+
+#barra{
+    font-size: 18px;
+    padding: 10px;
+}
+#menuinicial{
+    font-weight: lighter;
+    color: rgba(255, 255, 255, 0.753);
+}
+#menuinicial:hover{
+    font-weight: bolder;
+    color: white;
+}
+
+#nav-principal{
+    z-index: 1;
+}
+
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px){
+    body{
+        height: 800px;
+        background: linear-gradient(180deg, #0000 30%, #000D, #000 88%),
+        url(../img/allblack.png),
+        url(../img/therock1.png) no-repeat,
+        url(../img/vc6.png) no-repeat;
+    }
+    .titulo{
+        font-size: 2em;
+    }
+    .texto{
+        font-size: 1em;
+    }
+    #gta6logo{
+        height: 140px;
+    }
+    .capa{
+        top: 370px;
+        text-align: center;
+    }
+
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    body{
+        position: relative;
+        height: 800px;
+        background: linear-gradient(-180deg, #0000 30%, #000D, #000 90%),
+        url(../img/allblack.png),
+        url(../img/therock1.png) no-repeat,
+        url(../img/vc6.png) no-repeat;
+    }
+    .titulo{
+        font-size: 2em;
+    }
+    .texto{
+        font-size: 1em;
+    }
+    #gta6logo{
+        height: 140px;
+    }
+    .capa{
+        top: 370px;
+        text-align: center;
+    }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    body{
+        background: linear-gradient(-90deg,#000 8%, #000D 15%, #0000 60%),
+                url(../img/therock1.png) no-repeat,
+                url(../img/vc6.png) no-repeat;
+    }
+    .titulo{
+        font-size: 2em;
+    }
+    .texto{
+        font-size: 1em;
+    }
+    #gta6logo{
+        height: 180px;
+    }
+    .capa{
+        top: 130px;
+    }
+
+ }
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    body{
+        background: linear-gradient(-90deg, #000 10%, #000D 15%, #0000 60%),
+                url(../img/therock1.png) no-repeat,
+                url(../img/vc6.png) no-repeat;
+    }
+    .titulo{
+        font-size: 2.2em;
+    }
+    .texto{
+        font-size: 1.2em;
+    }
+    #gta6logo{
+        height: 200px;
+    }
+    .capa{
+        top: 130px;
+    }
+
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px){
+    .capa{
+        top: 130px;
+    }
+    .titulo{
+        font-size: 2.5em;
+    }
+    .texto{
+        font-size: 1.4em;
+    }
+
+}
