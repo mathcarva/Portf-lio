@@ -7,6 +7,37 @@ body{
     text-decoration: none;
 }
 
+/*POPUP___________________________________________________________________________ */
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 1);
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    z-index: 9999999; /* Valor alto para garantir sobreposição */
+}
+
+.popup-content {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
 /*HEADER______________________________________________________________________________ */
 
 header{
@@ -311,12 +342,96 @@ footer{
 
     hr{
         width: 75%
-    }    
+    }
+    
+    /*APRESENTAÇÃO (min-width: 992px) and (max-width: 1199.98px)________________________________________________________________________________*/
+
+    .profile{
+        padding-top: 170px;
+    }
+
+    /*TABELAS (min-width: 992px) and (max-width: 1199.98px)______________________________________________________________________*/
+
+    #tabela{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    th {
+        width: 290px;
+    }
+    
+    #hardskill{
+        padding-right: 2%;
+    }
+
+    /*PROJETOS (min-width: 992px) and (max-width: 1199.98px)____________________________________________________________________*/
+
+    #seta{
+        position: absolute;
+        margin-top: 100px;
+        margin-left: 15%;
+        width: 22%;
+        transform: rotate(-122.177deg);
+    }
+
+    .titulo{
+        height: 44%;
+        margin-top: 110px;
+
+    }
+
+    #h1-1{
+        font-size: 80px;
+    }
+
+    #h1-smll{
+        font-size: 0;
+    }
+
+    .descricao{
+        width: 150px;
+        font-size: 15px;
+    }
+
+    #doom-banner, #gta-banner{
+        width: 25%;
+    }
+
+    #gta-banner{
+        margin-left: 27%;
+    }
+
+    #doom-logo, #gta-logo{
+        width: 10%;
+        margin-left: 7%;
+        margin-top: 29%;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+    #gta-logo{
+        width: 8%;
+        margin-left: 36%;
+    }
+
+    #doom-banner:hover {
+        transform: scale(1.02);
+        opacity: 100%;
+    }
+
+    #gta-banner:hover {
+        transform: scale(1.02);
+        opacity: 100%;
+    }
+    
+    
 
 }
 
 /*Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) and (max-width: 991.98px) { 
+@media (min-width: 769px) and (max-width: 991.98px) { 
     
     .logo-img{
         margin-right: 200px;
@@ -326,40 +441,374 @@ footer{
         width: 80%
     }
 
- }
-
- @media (min-width: 576px) and (max-width: 767.98px) { 
+    /*APRESENTAÇÃO (min-width: 769px) and (max-width: 991.98px)_________________________________________________________________________________*/
 
     .profile{
-        padding-top: 220px;
+        padding-top: 150px;
+    }
+
+    #hello, #cargo, #resumo{
+        padding-top: 130px;
+        font-size: 15px;
+        }
+    
+        #cargo{
+        padding-top: 0px;
+        font-size: 26px;
+        }
+    
+        #resumo{
+        padding-top: 0px;
+        }
+    
+        /*TABELAS (min-width: 769px) and (max-width: 991.98px)______________________________________________________________________*/
+    
+        #tabela{
+            display: inline;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        th {
+            width: 550px;
+            font-size: 15px;
+        }
+    
+        td{
+            font-size: 15px;
+        }
+    
+        #hardskill, #softskill{
+            margin-top: 20px;
+            padding-right: 26%;
+            padding-left: 26%;
+        }
+    
+        /*PROJETOS (min-width: 769px) and (max-width: 991.98px)____________________________________________________________________*/
+    
+        #seta{
+            margin-top: 40px;
+            margin-left: 10%;
+        }
+    
+        .portfolio-box{
+            display: block;
+        }
+        
+        .texto{
+            display: inline;
+        }
+        
+        .titulo{
+            margin-left: 40%;
+            height: 0;
+            margin-top: 50px;
+        }
+    
+        #h1-smll{
+            display: flex;
+            margin-top: 0;
+            font-size: 59px;
+            width: 100%;
+        }
+    
+        #h1-1{
+            font-size: 0;
+        }
+        
+        .descricao{
+            margin-top: 48px;
+            margin-left: 14%;
+            width: 70%;
+            text-align: justify;
+            display: flex;
+            font-size: 15px;
+        }
+        
+        .projetos-box{
+            margin-top: 0;
+            margin-left: 20%;
+            width: 70%;
+            text-align: justify;
+            display: flex;
+            padding-bottom: 100px;
+        }
+    
+        #doom-banner, #doom-logo, #gta-banner, #gta-logo{
+            display: flex;
+            position: absolute;
+        }
+    
+        #doom-banner, #gta-banner{
+            width: 29%;
+            flex-shrink: 0;
+            border-radius: 17px;
+            opacity: 50%;
+            transition: 0.5s;
+            cursor: pointer;
+            box-shadow: 0px 4px 13px 10px rgba(0, 0, 0, 0.55);
+        }
+    
+        #gta-banner{
+            margin-left: 30%;
+        }
+    
+        #doom-logo, #gta-logo{
+            width: 10%;
+            margin-left: 7%;
+            margin-top: 35%;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+    
+        #gta-logo{
+            width: 8%;
+            margin-left: 36%;
+        }
+    
+        #doom-banner:hover {
+            transform: scale(1.02);
+            opacity: 100%;
+        }
+    
+        #gta-banner:hover {
+            transform: scale(1.02);
+            opacity: 100%;
+        }
+    
+        /*FOOTER (min-width: 769px) and (max-width: 991.98px)______________________________________________________________________*/
+    
+        footer{
+            display: flex;
+            margin-top: 40%;
+            font-size: 14px;
+        }
+    
+        #logo-footer{
+            width: 50px;
+            cursor: pointer;
+        }
+    
+        #logo-footer:hover{
+            content: url(img/logo-neon.png);
+        }
+    
+        .footer-navigation{
+            display: flex;
+        }
+    
+        .footer-list{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+ }
+
+ @media (min-width: 576px) and (max-width: 768px) { 
+
+    /*HEADER (min-width: 576px) and (max-width: 768px)______________________________________________________________________________ */
+    
+    li{
+        font-size: 13px;
+    }
+
+    .logo-img{
+        width: 50px;
+    }
+
+    .logo-img:hover{
+        width: 50px;
+    }
+
+    /*PROFILE (min-width: 576px) and (max-width: 768px)______________________________________________________________________________ */
+
+    .profile{
+        padding-top: 90px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
     
     #circle, #eu, #circle2{
-        width: 500px;
-        position: absolute;
+        width: 275px;
     }
     
     #eu{
-        width: 250px;
+        width: 155px;
     }
     
     #circle{
-        height: 430px;
+        height: 265px;
     }
     
     #circle2{
-        width: 550px;
-        opacity: 0.4;
+        width: 340px;
+    }
+
+    /*APRESENTAÇÃO (min-width: 576px) and (max-width: 768px)_________________________________________________________________________________*/
+
+    #hello, #cargo, #resumo{
+    padding-top: 70px;
+    font-size: 13px;
+    }
+
+    #cargo{
+    padding-top: 0px;
+    font-size: 24px;
+    }
+
+    #resumo{
+    padding-top: 0px;
+    }
+
+    /*TABELAS (min-width: 576px) and (max-width: 768px)______________________________________________________________________*/
+
+    #tabela{
+        display: inline;
+        justify-content: center;
+        align-items: center;
+    }
+
+    th {
+        width: 420px;
+        font-size: 13px;
+    }
+
+    td{
+        font-size: 13px;
+    }
+
+    #hardskill, #softskill{
+        margin-top: 15px;
+        padding-right: 20%;
+        padding-left: 20%;
+    }
+
+    /*PROJETOS (min-width: 576px) and (max-width: 768px)____________________________________________________________________*/
+
+    #seta{
+        margin-top: 40px;
+        margin-left: 10%;
+    }
+
+    .portfolio-box{
+        display: block;
     }
     
+    .texto{
+        display: inline;
+    }
+    
+    .titulo{
+        margin-left: 40%;
+        height: 0;
+        margin-top: 50px;
+    }
+
+    #h1-smll{
+        display: flex;
+        margin-top: 0;
+        font-size: 53px;
+        width: 100%;
+    }
+
+    #h1-1{
+        font-size: 0;
+    }
+    
+    .descricao{
+        margin-top: 48px;
+        margin-left: 14%;
+        width: 70%;
+        text-align: justify;
+        display: flex;
+        font-size: 13px;
+    }
+    
+    .projetos-box{
+        margin-top: 0;
+        margin-left: 25%;
+        width: 70%;
+        text-align: justify;
+        display: flex;
+        padding-bottom: 100px;
+    }
+
+    #doom-banner, #doom-logo, #gta-banner, #gta-logo{
+        display: flex;
+        position: absolute;
+    }
+
+    #doom-banner, #gta-banner{
+        width: 24%;
+        flex-shrink: 0;
+        border-radius: 17px;
+        opacity: 50%;
+        transition: 0.5s;
+        cursor: pointer;
+        box-shadow: 0px 4px 13px 10px rgba(0, 0, 0, 0.55);
+    }
+
+    #gta-banner{
+        margin-left: 27%;
+    }
+
+    #doom-logo, #gta-logo{
+        width: 10%;
+        margin-left: 7%;
+        margin-top: 29%;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+    #gta-logo{
+        width: 8%;
+        margin-left: 36%;
+    }
+
+    #doom-banner:hover {
+        transform: scale(1.02);
+        opacity: 100%;
+    }
+
+    #gta-banner:hover {
+        transform: scale(1.02);
+        opacity: 100%;
+    }
+
+    /*FOOTER (min-width: 576px) and (max-width: 768px)______________________________________________________________________*/
+
+    footer{
+        display: flex;
+        margin-top: 30%;
+        font-size: 11px;
+    }
+
+    #logo-footer{
+        width: 50px;
+        cursor: pointer;
+    }
+
+    #logo-footer:hover{
+        content: url(img/logo-neon.png);
+    }
+
+    .footer-navigation{
+        display: flex;
+    }
+
+    .footer-list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
 
 @media (min-width: 500px) and (max-width: 575px) {
 
-    /*HEADER______________________________________________________________________________ */
+    /*HEADER (min-width: 500px) and (max-width: 575px)______________________________________________________________________________ */
     
     li{
         font-size: 12px;
@@ -373,7 +822,7 @@ footer{
         width: 50px;
     }
 
-    /*PROFILE______________________________________________________________________________ */
+    /*PROFILE (min-width: 500px) and (max-width: 575px)______________________________________________________________________________ */
 
     .profile{
         padding-top: 90px;
@@ -398,7 +847,7 @@ footer{
         width: 275px;
     }
 
-    /*APRESENTAÇÃO_________________________________________________________________________________*/
+    /*APRESENTAÇÃO (min-width: 500px) and (max-width: 575px)_________________________________________________________________________________*/
 
     #hello, #cargo, #resumo{
     padding-top: 60px;
@@ -414,7 +863,7 @@ footer{
     padding-top: 0px;
     }
 
-    /*TABELAS______________________________________________________________________*/
+    /*TABELAS (min-width: 500px) and (max-width: 575px)______________________________________________________________________*/
 
     #tabela{
         display: inline;
@@ -437,7 +886,7 @@ footer{
         padding-left: 16%;
     }
 
-    /*PROJETOS____________________________________________________________________*/
+    /*PROJETOS (min-width: 500px) and (max-width: 575px)____________________________________________________________________*/
 
     #seta{
         margin-top: 40px;
@@ -529,7 +978,208 @@ footer{
         opacity: 100%;
     }
 
-    /*FOOTER______________________________________________________________________*/
+    /*FOOTER (min-width: 500px) and (max-width: 575px)______________________________________________________________________*/
+
+    footer{
+        display: flex;
+        margin-top: 150px;
+        font-size: 11px;
+    }
+
+    #logo-footer{
+        width: 50px;
+        cursor: pointer;
+    }
+
+    #logo-footer:hover{
+        content: url(img/logo-neon.png);
+    }
+
+    .footer-navigation{
+        display: flex;
+    }
+
+    .footer-list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media (min-width: 200px) and (max-width: 500px) {
+
+    /*HEADER (min-width: 200px) and (max-width: 500px)______________________________________________________________________________ */
+    
+    li{
+        font-size: 12px;
+    }
+
+    .logo-img{
+        width: 50px;
+    }
+
+    .logo-img:hover{
+        width: 50px;
+    }
+
+    /*PROFILE (min-width: 200px) and (max-width: 500px)______________________________________________________________________________ */
+
+    .profile{
+        padding-top: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #circle, #eu, #circle2{
+        width: 250px;
+    }
+    
+    #eu{
+        width: 125px;
+    }
+    
+    #circle{
+        height: 215px;
+    }
+    
+    #circle2{
+        width: 275px;
+    }
+
+    /*APRESENTAÇÃO (min-width: 200px) and (max-width: 500px)_________________________________________________________________________________*/
+
+    #hello, #cargo, #resumo{
+    padding-top: 60px;
+    font-size: 12px;
+    }
+
+    #cargo{
+    padding-top: 0px;
+    font-size: 22px;
+    }
+
+    #resumo{
+    padding-top: 0px;
+    }
+
+    /*TABELAS (min-width: 200px) and (max-width: 500px)______________________________________________________________________*/
+
+    #tabela{
+        display: inline;
+        justify-content: center;
+        align-items: center;
+    }
+
+    th {
+        width: 400px;
+        font-size: 12px;
+    }
+
+    td{
+        font-size: 12px;
+    }
+
+    #hardskill, #softskill{
+        margin-top: 15px;
+        padding-right: 16%;
+        padding-left: 16%;
+    }
+
+    /*PROJETOS (min-width: 200px) and (max-width: 500px)____________________________________________________________________*/
+
+    #seta{
+        margin-top: 40px;
+        margin-left: 10%;
+    }
+
+    .portfolio-box{
+        display: block;
+    }
+    
+    .texto{
+        display: inline;
+    }
+    
+    .titulo{
+        margin-left: 36%;
+        height: 0;
+        margin-top: 50px;
+    }
+
+    #h1-smll{
+        display: flex;
+        margin-top: 0;
+        font-size: 48px;
+        width: 100%;
+    }
+
+    #h1-1{
+        font-size: 0;
+    }
+    
+    .descricao{
+        margin-top: 48px;
+        margin-left: 14%;
+        width: 70%;
+        text-align: justify;
+        display: flex;
+        font-size: 12px;
+    }
+    
+    .projetos-box{
+        margin-top: 0;
+        margin-left: 25%;
+        width: 70%;
+        text-align: justify;
+        display: flex;
+        padding-bottom: 100px;
+    }
+
+    #doom-banner, #doom-logo, #gta-banner, #gta-logo{
+        display: flex;
+        position: absolute;
+    }
+
+    #doom-banner, #gta-banner{
+        width: 24%;
+        flex-shrink: 0;
+        border-radius: 17px;
+        opacity: 50%;
+        transition: 0.5s;
+        cursor: pointer;
+        box-shadow: 0px 4px 13px 10px rgba(0, 0, 0, 0.55);
+    }
+
+    #gta-banner{
+        margin-left: 27%;
+    }
+
+    #doom-logo, #gta-logo{
+        width: 10%;
+        margin-left: 7%;
+        margin-top: 29%;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+    #gta-logo{
+        width: 8%;
+        margin-left: 36%;
+    }
+
+    #doom-banner:hover {
+        transform: scale(1.02);
+        opacity: 100%;
+    }
+
+    #gta-banner:hover {
+        transform: scale(1.02);
+        opacity: 100%;
+    }
+
+    /*FOOTER (min-width: 200px) and (max-width: 500px)______________________________________________________________________*/
 
     footer{
         display: flex;
